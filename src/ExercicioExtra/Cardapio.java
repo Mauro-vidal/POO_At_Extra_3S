@@ -33,19 +33,4 @@ public class Cardapio {
         return null;
     }
 
-    public String opcoesBebida(){
-
-        for (Pedido bebida: cardapioBebidas) {
-
-            cardapioBebidas.add(0, bebida);
-            cardapioBebidas.add(1, bebida);
-            cardapioBebidas.add(2, bebida);
-            cardapioBebidas.add(3, bebida);
-            cardapioBebidas.add(4, bebida);
-            cardapioBebidas.add(5, bebida);
-
-        }
-        return opcoesBebida();
-    }
-
 }

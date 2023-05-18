@@ -29,7 +29,7 @@ public class Pedido {
 
         double valorTaxa = (taxaServico / 100) * taxaServico;
         totalPedido = totalPedido + valorTaxa ;
-        System.out.println("Valor total do pedido com uma taxa de 10% R$: "+totalPedido);
+        System.out.println("\nValor total do pedido com uma taxa de 10% R$: "+totalPedido);
     }
 
     public void troco(double valorPago){

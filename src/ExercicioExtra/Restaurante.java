@@ -18,7 +18,7 @@ public class Restaurante {
     }
 
     private int menuInicial(){
-        System.out.println("Dentre as opções disponíveis abaixo, qual deseja?");
+        System.out.println("Olá, caso queira fazer um pedido digite 1");
         System.out.println("\n1: Fazer pedido");
         System.out.println("2: Sair");
         return scanner.nextInt();
@@ -30,9 +30,14 @@ public class Restaurante {
         String nome = scanner.next();
         cliente.setNome(nome);
         cliente.boasVindas();
+
         Pedido pedido = new Pedido(cliente);
         Cardapio cardapio = new Cardapio();
+
+        System.out.println("\nAbaixo será disponibilizado o cardápio, o que você deseja?" );
         cardapio.opcoesDePratos();
+        System.out.println("\nSelecione as opções que deseja e quando quiser finalizar seu pedido digite 0");
+
         int codigo = scanner.nextInt();
         while (codigo != 0){
             Item item = cardapio.getItemCardapio(codigo);
@@ -47,7 +52,7 @@ public class Restaurante {
         }
 
         pedido.mostrarItensPedidos();
-        System.out.println("Qual foi o valor pago ? ");
+        System.out.println("\nQual foi o valor pago ? ");
         double valorPago = Double.valueOf(scanner.next());
         while(valorPago < pedido.getTotalPedido()){
             System.out.println("O valor informado é menor do que o total do pedido");
