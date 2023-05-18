@@ -5,8 +5,6 @@ public class Cardapio {
 
     private ArrayList<Item> cardapio = new ArrayList<>();
 
-    private ArrayList<Pedido> cardapioBebidas = new ArrayList<>();
-
     public Cardapio(){
         cardapio.add(new Item(1, "Pizza", 50.00));
         cardapio.add(new Item(2, "Hambúrguer", 35.0));
